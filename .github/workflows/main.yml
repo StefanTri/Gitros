@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Novi Sad grad kulture</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class=" jumbotron-header" id="onama"> 
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-dark fixed-top navFix">
+            <a class="n" href="index.html"><img class="mnsl" src="meni.jpg"></a>
+            <a href="#onama" class="navbar-hamburger"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+            
+            <div class="collapse navbar-collapse" id="navMenu"> 
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item jed"><a class="link" href="index.html">O nama</a></li>
+                <li class="nav-item jed"><a class="link" href="vise.html">Vise o nama</a></li>
+                <li class="nav-item jed"><a class="link cr" href="#">Treninzi</a></li>
+                <li class="nav-item jed"><a class="link" href="kontakt.html">Kontakt</a></li>
+              </ul>
+            </div>
+          </nav>        
+        </div>
+        <div class="trener">
+            <h1>Termini</h1>
+            <h2>PONEDELJAK, SREDA I PETAK (REKREATIVNI TEKVONDO)</h2>
+            <a href="#" onclick="ispis('raspored1')">Raspored</a>
+            <div id="polje"></div>
+            
+            <h2>UTORAK I ČETVRTAK (takmičarski tekvondo)</h2>
+            <a href="#" onclick="ispis('raspored2')">Raspored</a>
+            <div id="polje1"></div>
+            
+            <h2>SUBOTA  (takmičarski tekvondo)</h2>
+            <a href="#" onclick="ispis('raspored3')">Raspored</a>
+            <div id="polje2"></div>
+            
+            <h2>MOGUĆNOST ODRŽAVANJA INDIVIDUALNIH TRENINGA:</h2>
+            <p>Cena individualnog treninga iznosi 10€.</p>
+            <h2>Mesečna članarina:</h2>
+            <a href="#" onclick="ispis('raspored4')">Raspored</a>
+            <div id="polje3"></div>
+            
+        </div>
+        <div class="dugg">
+            <a href="kontakt.html">Prijavi se!</a>
+        </div>
+    <div class="ft">
+        <a href="https://www.instagram.com/"><img class="logi" src="insta.png" alt=""></a>
+        <a href="https://www.facebook.com/"><img class="logi" src="Facebook.png" alt=""></a>
+        <a href="https://www.youtube.com/"><img class="logi" src="yt.png" alt=""></a>
+    </div>
+    <script src="java.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Novi Sad grad kulture</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="tekst()">
+    <header class=" jumbotron-header" id="onama"> 
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-dark fixed-top navFix">
+            <a class="n" href="index.html"><img class="mnsl" src="meni.jpg"></a>
+            <a href="#onama" class="navbar-hamburger"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+            
+            <div class="collapse navbar-collapse" id="navMenu"> 
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item jed"><a class="link" href="index.html">O nama</a></li>
+                <li class="nav-item jed"><a class="link cr" href="#">Vise o nama</a></li>
+                <li class="nav-item jed"><a class="link" href="treninzi.html">Treninzi</a></li>
+                <li class="nav-item jed"><a class="link" href="kontakt.html">Kontakt</a></li>
+              </ul>
+            </div>
+          </nav>        
+        </div>
+        <div class="tek">
+            <h1 class="nass">TaeKwonDo (tekvondo) klub “Gitros”, Novi Sad</h1>
+            <p>jedan je od najmlađih klubova u Srbiji.
+                U zdravoj atmosferi našeg kluba možete trenirati rekreativni ili takmičarski TaeKwonDo ili posmatrajući uživati u ovom olimpijskom sportu.
+                Velika prednost kluba u odnosu na ostale je vrhunski opremljena sala koja vam garantuje savršene uslove treniranja.
+                Poseban akcenat klub stavlja na rad sa decom od 4 godine do 6 godina. Klub danas broji preko 100 članova.</p>
+            </div>   
+            <div class="trener">
+                <h2>Trener</h2>
+                <h1>Aleksandar Andreevski</h1>
+                <div id="polja"></div>
+
+                <div id="polja1"></div>
+                  
+            </div> 
+            <div class="trener">
+                <h2>Pravilnik kluba</h2>
+                <h2>Članovi Taekwondo kluba “Gitros” moraju se pridržavati određenih pravila:</h2>
+                <div id="polja2"></div>
+                
+            </div>>
+<div class="dug">
+    <p>Želiš da se učlaniš?</p>
+    <a href="kontakt.html">Učlani se!</a>
+</div>
+    <div class="ft">
+        <a href="https://www.instagram.com/"><img class="logi" src="insta.png" alt=""></a>
+        <a href="https://www.facebook.com/"><img class="logi" src="Facebook.png" alt=""></a>
+        <a href="https://www.youtube.com/"><img class="logi" src="yt.png" alt=""></a>
+    </div>
+    <script src="java.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Novi Sad grad kulture</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class=" jumbotron-header" id="onama"> 
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-dark fixed-top navFix">
+            <a class="n" href="#"><img class="mnsl" src="meni.jpg"></a>
+            <a href="#onama" class="navbar-hamburger"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+            
+            <div class="collapse navbar-collapse" id="navMenu"> 
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item jed"><a class="link cr" href="#onama">O nama</a></li>
+                <li class="nav-item jed"><a class="link" href="vise.html">Vise o nama</a></li>
+                <li class="nav-item jed"><a class="link" href="treninzi.html">Treninzi</a></li>
+                <li class="nav-item jed"><a class="link" href="kontakt.html">Kontakt</a></li>
+              </ul>
+            </div>
+          </nav>        
+        </div>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <ul class="carousel-indicators">
+              <li data-target="#demo" data-slide-to="0" class="active"></li>
+              <li data-target="#demo" data-slide-to="1"></li>
+              <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="maxresdefault.jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="преузимање (1).jpg" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="преузимање (2).jpg" alt="">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          
+          </div>
+      </header>
+    <div class="container">
+        <h2 class="nas">MI NISMO OBIČAN KLUB, MI SMO PORODICA!</h2>
+   <p oncopy="kopija()" class="nas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere asperiores architecto ex magni libero sequi repellendus voluptas
+     vel ratione cum atque, eius animi quo, itaque nam sit id obcaecati!
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere asperiores architecto ex magni libero sequi repellendus voluptas
+     vel ratione cum atque, eius animi quo, itaque nam sit id obcaecati!Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facere asperiores architecto ex magni libero sequi repellendus voluptas
+     vel ratione cum atque, eius animi quo, itaque nam sit id obcaecati!
+   </p>
+</div>
+<div class="dug">
+    <p>Želiš da se učlaniš?</p>
+    <a href="kontakt.html">Učlani se!</a>
+</div>
+    <div class="ft">
+        <a href="https://www.instagram.com/"><img class="logi" src="insta.png" alt=""></a>
+        <a href="https://www.facebook.com/"><img class="logi" src="Facebook.png" alt=""></a>
+        <a href="https://www.youtube.com/"><img class="logi" src="yt.png" alt=""></a>
+    </div>
+    <script src="java.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+function kopija() {
+    alert("Uhvacen si da kopiras tekst!");
+}
+function poruka(){
+    alert("Dobro nam dosli!")
+}
+function ispis(x){
+    let raspored1 = [
+        "Od 18:00h – 18:45h Školica sporta i korektivna gimnastika sa elementima tekvondoa (deca od 4 do 6 godina)",
+"Od 19:00h – 20:00h (deca od 7 do 11 godina)",
+"Od 20:15h – 21:15h (deca od 12 do 16 godina)",
+"Od 21:15h – 22:15h ( preko 17 godina)"
+    ];
+    let raspored2 = [
+        "Od 19:00h – 20:15h I grupa",
+"Od 20:30h – 21:45h II grupa"
+    ];
+    let raspored3 = [
+        "Od 09:45h – 11:00h I grupa",
+"Od 11:00h – 12:15h II grupa"
+    ];
+    let raspored4 = [
+        "Za jednu osobu iznosi 3000 dinara.",
+"Za dvoje iz iste porodice 5000 dinara.",
+"Za troje iz iste porodice 6000 dinara.",
+"Dete + roditelj (fitness zona) 4500 dinara.",
+"Fitness zona 1500 dinara.",
+"*Članarina sa plaća do 10-og za tekući mesec."
+    ];
+
+    const polje = document.getElementById("polje");
+    const polje1 = document.getElementById("polje1");
+    const polje2 = document.getElementById("polje2");
+    const polje3 = document.getElementById("polje3");
+
+    let sadrzaj = "";
+    if(x==='raspored1'){
+        sadrzaj+= "<ul>";
+        for(let i=0; i < raspored1.length; i++){
+            sadrzaj += "<li>" + raspored1[i] + "</li>";
+        }
+        sadrzaj+= "</ul>";
+        polje.innerHTML= sadrzaj;
+    }
+    else if(x==='raspored2'){
+        sadrzaj+= "<ul>";
+        for(let i=0; i < raspored2.length; i++){
+            sadrzaj += "<li>" + raspored2[i] + "</li>";
+        }
+        sadrzaj+= "</ul>";
+        polje1.innerHTML= sadrzaj;
+    }
+    else if(x==='raspored3'){
+        sadrzaj+= "<ul>";
+        for(let i=0; i < raspored3.length; i++){
+            sadrzaj += "<li>" + raspored3[i] + "</li>";
+        }
+        sadrzaj+= "</ul>";
+        polje2.innerHTML= sadrzaj;
+    }
+    else if(x==='raspored4'){
+        sadrzaj+= "<ul>";
+        for(let i=0; i < raspored4.length; i++){
+            sadrzaj += "<li>" + raspored4[i] + "</li>";
+        }
+        sadrzaj+= "</ul>";
+        polje3.innerHTML= sadrzaj;
+    }
+}
+
+function tekst(){
+    let trener = "Rođen 19.04.1988. godine u Vršcu. Taekwondo-om se bavi od 1999. godine. Nosilac je crnog pojasa 3.DAN. Trenirao je u taekwondo klubu ” Vršac ” iz Vršca, jednom od najuspešnijih klubova u državi. Glavni trener mu je Boris Gorjup, nosilac crnog pojasa 5. DAN, bivši trener juniorske a danas veoma uspešan trener seniorske reprezentacije. Aleksandar Andreevski od 2000. godine aktivno se bavi takmičarskim taekwondo-om. Osvajač je mnogobrojnih medalja u državi i inostranstvu. Višestruki je prvak države u pionirskoj, juniorskoj i seniorskoj konkurenciji i dugogodišnji član reprezentacije.";
+    let tren = [
+        "2013. godine je izabran za pomoćnog trenera pionirske reprezentacije Srbije.",
+"2015. godine izabran je za jednog od glavnih trenera pionirske reprezentacije Srbije.",
+"2016. godine izabran je za glavnog trenera para tekvondo reprezentacije Srbije.",
+"2017. završava osnovne akademske studije na fakultetu za sport u Beogradu."
+    ];
+    let pravila = [
+        "Uvek pokazivati poštovanje prema trenerima i nosiocima viših pojaseva",
+"Pokloniti se kada se ulazi ili izlazi iz sale za vežbanje",
+"Naklon se vrši iz stojeceg stava, spojenih stopala, držeći ruke na bokovima, blagim spuštanjem glave i naginjanjem prema napred",
+"Zabranjeno je u obući ulaziti u salu za vežbanje (osim u patikama za Taekwondo)",
+"Uvek imati uredan i čist Dobok ( Tae Kwon Do uniformu)",
+"Bez psovanja i galame u prostorijama kluba a pogotovo u sali za vežbanje",
+"U klubu su zabranjeni pušenje i konzumiranje alkohola",
+"Ako nosilac nižeg pojasa pokaže nedostatak znanja, dužnost je starijih da ga informišu ili isprave"
+    ];
+    const polja = document.getElementById("polja");
+    const polja1 = document.getElementById("polja1");
+    const polja2 = document.getElementById("polja2");
+    polja.innerHTML="<p>"+trener+"</p>";
+    let sadr = "";
+    sadr+= "<ul>";
+    for (let i=0; i < tren.length; i++){
+            sadr += "<li>" + tren[i] + "</li>";
+    }
+    sadr+= "</ul>";
+    polja1.innerHTML= sadr;
+
+    let drugi = "";
+    drugi+= "<ul>";
+    for (let i=0; i < pravila.length; i++){
+        drugi+= "<li>" + pravila[i] + "</li>";
+    }
+    drugi += "</ul>";
+    polja2.innerHTML = drugi;
+}
+function Provera(Obrazac)
+     {
+        const p = document.getElementById("p");
+        const a = document.getElementById("a");
+        const b = document.getElementById("b");
+        const v = document.getElementById("v");
+        const g = document.getElementById("g");
+      if(Obrazac.mejl.value=="")
+      {
+      alert("Unesi e-mail!");
+      Obrazac.mejl.focus();
+      p.style.border="5px solid red";
+      return false;
+      }
+      else if(Obrazac.ime.value=="")
+      {
+      alert("Unesi ime!");
+      Obrazac.ime.focus();
+      a.style.border="5px solid red";
+      return false;
+      }
+      else if(Obrazac.prezime.value=="")
+      {
+      alert("Unesi prezime!");
+      Obrazac.prezime.focus();
+      b.style.border="5px solid red";
+      return false;
+      }
+      else if(Obrazac.sifra.value=="")
+      {
+      alert("Unesi sifru!");
+      Obrazac.sifra.focus();
+      v.style.border="5px solid red";
+      return false;
+      }
+      else if(Obrazac.adresa.value=="")
+      {
+        alert("Unesi adresu!");
+      Obrazac.adresa.focus();
+      g.style.border="5px solid red";
+      return false;
+      }
+      else { 
+        alert("Uspesno ste se prijavili!!!");
+        return true;
+      }
+     }
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Novi Sad grad kulture</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="poruka()">
+    <header class=" jumbotron-header" id="onama"> 
+        <div class="container">
+          <nav class="navbar navbar-expand-sm navbar-dark fixed-top navFix">
+            <a class="n" href="index.html"><img class="mnsl" src="meni.jpg"></a>
+            <a href="#onama" class="navbar-hamburger"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu">
+              <span class="navbar-toggler-icon"></span>
+            </button> 
+            
+            <div class="collapse navbar-collapse" id="navMenu"> 
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item jed"><a class="link" href="index.html">O nama</a></li>
+                <li class="nav-item jed"><a class="link" href="vise.html">Vise o nama</a></li>
+                <li class="nav-item jed"><a class="link" href="treninzi.html">Treninzi</a></li>
+                <li class="nav-item jed"><a class="link cr" href="#">Kontakt</a></li>
+              </ul>
+            </div>
+          </nav>        
+        </div>
+        <form name="obrazac"  onSubmit="return Provera(obrazac)" >
+          <h2>Registracija novih clanova</h2>
+            <label>Ime:<span style="color:red">*</span></label>
+            <input id="a" type="text" name="ime" size="30px">
+            <br>
+            <label>Prezime:<span style="color:red">*</span></label>
+            <input id="b" type="text" name="prezime" size="30px">
+            <br>
+            <label>Email:<span style="color:red">*</span></label>
+            <input id="p" type="email" name="mejl" size="30px">
+            <br>
+            <label>Password:<span style="color:red">*</span></label>
+             <input id="v" type="password" id="inputPassword" name="sifra" size="30px" maxlength="15" minlength="4">
+             <br>
+             <label>Address:<span style="color:red">*</span></label>
+             <input id="g" type="text" name="adresa" id="inputAddress" size="30px" placeholder="">
+             <br>
+             <label>Vrsta članarine:</label>
+            <select id="inputTrening">
+                    <option value>Choose...</option>
+                    <option value>Za jedno</option>
+                    <option value>Za dvoje</option>
+                    <option value>Za troje</option>
+                    <option value>Fitnes</option>
+                    <option value>Dete+roditelj</option>
+            </select>  
+            <br>
+            <div class="dugg">
+              <input type="submit" value="Prijavi se" >
+            </div> 
+          </form>
+    <div class="ftt">
+        <a href="https://www.instagram.com/"><img class="logi" src="insta.png" alt=""></a>
+        <a href="https://www.facebook.com/"><img class="logi" src="Facebook.png" alt=""></a>
+        <a href="https://www.youtube.com/"><img class="logi" src="yt.png" alt=""></a>
+    </div>
+    <script src="java.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+html,body{
+    margin: 0;
+	padding: 0;
+	overflow: auto;
+    background-color: grey;
+}
+.carousel-item img{
+    margin-top: 45px;
+    height: 500px;
+    width: 100%;
+}
+.navFix {
+	position:fixed;
+	top:0;
+	background:transparent;
+	width:100%;
+	height:50px;
+} 
+.navFix{
+    border: 3px solid black;
+    background-color: white !important;
+    height: auto;
+} 
+.navbar-hamburger {
+	font-size:25px;
+	font-weight:600;
+	color: orangered;
+	text-transform:uppercase;
+	padding-left:10px;
+}
+.navbar-hamburger:hover{
+	text-decoration:none;
+	color:orangered;
+}
+.mnsl{
+    margin: 0%;
+    padding: 0%;
+    width: 300px;
+}
+.link{
+	color: rgb(39, 38, 38);
+	font-size: 18px;
+	line-height: 2.278;
+    font-weight: bold;
+    margin: 0px 20px;
+    padding: 3px;
+}
+.link:hover {
+    padding: 6px;
+	color:orangered;
+    text-decoration: none;
+    text-shadow: 1px white;
+}
+
+.header-h1 {
+    color: white;
+    text-shadow:4px -1px black;
+    text-align: center;
+    justify-content: center;
+    margin: 300px 0;
+    text-transform: uppercase;
+    font-size: 66px;
+    font-weight: 600;
+}
+.slika{
+    margin: 0% 25%;
+}
+.slika img{
+    margin: auto;
+    padding: 5px;
+    width: 500px;
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cr{
+    color: orangered;
+}
+.container{
+    padding: 10px;
+    margin:auto;
+}
+.nas{
+    width: 100%;
+    background-color: white;
+    color: orangered;
+    text-align: center;
+    font-weight: bold;
+}
+.dug{
+    padding: 5px;
+    border: 1px solid orangered;
+    background-color: orangered;
+    text-align: center;
+    align-items: center;
+}
+.dug p{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+.dug a{
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    border: 2px solid grey;
+    border-radius: 10%;
+    background-color: grey;
+}
+.dug a:hover{
+    padding: 10px;
+    background-color: white;
+    color: orangered;
+    border: 2px solid white;
+    border-radius: 10%;
+}
+.ft{
+    width: 100%;
+    background-color: white;
+    color: orangered;
+    text-align: center;
+}
+.logi{
+    margin: 10px;
+    width: 50px;
+}
+.tek{
+    background-color: white;
+    margin-top: 45px;
+    margin-right: 20%;
+    margin-left: 20%;
+    border: 2px solid white;
+    border-radius: 10%;
+}
+.tek:hover{
+    border-radius: 0%;
+    transition: 0.9s ease;
+    transform: rotate(360deg);
+}
+.nass{
+    text-align: center;
+    color: orangered;
+}
+.tek p{
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 20px;
+}
+.trener{
+    background-color: white;
+    margin-top: 45px;
+    margin-left:10%;
+    margin-right: 10%;
+    border: 2px solid white;
+}
+.dugg{
+    text-align: center;
+}
+.dugg a{
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.699);
+    border: 2px solid grey;
+    border-radius: 10%;
+    background-color: orangered;
+}
+.dugg a:hover{
+    background-color: white;
+    color: orangered;
+}
+.dugg input{
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.699);
+    border: 2px solid grey;
+    border-radius: 10%;
+    background-color: orangered;
+}
+.dugg input:hover{
+    background-color: white;
+    color: orangered;
+}
+form{
+    background-color: orangered;
+    margin-top: 70px;
+    font-size: 25px;
+    text-align: center;
+    margin-left:25%;
+    margin-right: 25%;
+    color: white;
+}
+input{
+    
+    margin: 10px;
+}
+footer{
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+}
+.ftt{
+    width: 100%;
+    background-color: white;
+    color: orangered;
+    text-align: center;
+    bottom: 0px;
+    position: absolute;
+}
+#polje, #polje1, #polje2, #polje3{
+    background-color: white;
+    margin-left:10%;
+    margin-right: 10%;
+    border: 2px solid white;
+}
+.trener a{
+    font-weight: bold;
+    text-decoration: none;
+    color: orangered;
+}
+#polja, #polja1, #polja2{
+    background-color: white;
+    margin-left:10%;
+    margin-right: 10%;
+    border: 2px solid white;
+}
