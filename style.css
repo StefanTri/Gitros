@@ -232,3 +232,7 @@ footer{
     margin-right: 10%;
     border: 2px solid white;
 }
+.fb-share-button{
+	background-color: orange;
+	color: black;
+}
